@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BookingCo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.staticaly.com/gh/hung1001/font-awesome-pro/8af0edd/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <style>
+      .liked{
+          color: red;
+      }
+  </style>
+  <body>
+    <div class="bg-white mx-md-5 px-md-5 position-relative">
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-5">
+        <a
+          href="/"
+          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
+        >
+          <span class="fs-4 fw-bold">BookingCo</span>
+        </a>
+
+        <ul class="nav">
+          <li class="nav-item fw-normal">
+            <a
+              href="./index.html"
+              class="nav-link text-decoration-none text-black"
+              aria-current="page"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item fw-normal">
+            <a href="./hotel.html" class="nav-link text-decoration-none text-black"
+              >Contact</a
+            >
+          </li>
+          <li class="nav-item fw-normal">
+            <a href="./aboutus.html" class="nav-link text-decoration-none text-black"
+              >About</a
+            >
+          </li>
+          <li class="nav-item fw-normal">
+            <a href="./game/game.html" class="nav-link text-decoration-none text-black"
+              >Game</a
+            >
+          </li>
+          <li class="nav-item fw-normal">
+              <button
+                      onclick="window.location.href='./login.html'"
+                      name="login"
+                      class="nav-link text-black px-4 py-1 border-1 border border-dark rounded-2"
+              >
+                  Login
+              </button>
+          </li>
+        </ul>
+      </header>
+      <section class="w-100 d-flex">
+        <div class="col-3">
+          <div class="p-5">
+            <div class="bg-white rounded-4 shadow h-100 p-3">
+              <input class="form-control mb-3" placeholder="Search"/>
+              <div class="d-flex">
+                <div class="col-6 pe-2">
+                  <label for="checkIn">Check In</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="checkIn"
+                    name="checkin-date"
+                  />
+                </div>
+                <div class="col-6 ps-2">
+                  <label for="checkOut">Check Out</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="checkOut"
+                    name="checkout-date"
+                  />
+                </div>
+              </div>
+              <div class="d-flex mt-4 f.">
+                <div class="col-4 pe-1">
+                  <label for="room">Room</label>
+                  <select name="room" id="room" class="form-select">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                  </select>
+                </div>
+                <div class="col-4 px-1">
+                  <label for="adults">Adult</label>
+                  <select name="adults" id="adults" class="form-select">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                  </select>
+                </div>
+                <div class="col-4 ps-1">
+                  <label for="children">Children</label>
+                  <select name="children" id="children" class="form-select">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-9">
+      <div class="d-flex justify-content-between mb-5">
+        <div class="col-sm-5 col-md-3 col-lg-3" onclick="window.location.href='./hotel.html'" style="cursor: pointer;">
+            <div class="hotel-card bg-white rounded-2 shadow d-flex flex-column overflow-hidden d-block d-lg-flex">
+              <div class="hotel-card_images position-relative">
+                <img src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/flyfish/raw/NH7411374746154/QS1047/QS1047-Q1/1624869531952.jpeg" style="max-height: 200px;">
+                <div class="position-absolute" style="top: 10px; right: 10px; z-index: 100;">
+                    <button onclick="like('hrt-1')" class="text-dark ml-auto bg-transparent border-0"><i class="far fa-heart fa-lg" id="hrt-1"></i></button>
+                </div>
+              </div>
+              <div class="hotel-card_info p-4">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-column align-items-left mb-2">
+                        <h5 class="mb-0 mr-2">The Orchid</h5>
+                        <div>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                        </div>
+                    </div>
+                    <div class="p text-black-50 text-right                  ">
+                        Starts from <br><span class="text-black fw-semibold fs-5">₹9,999</span>
+                    </div>
+                </div>
+                <div class="d-flex hidden d-none justify-content-between align-items-end">                      
+                  <div class="hotel-card_pricing text-center">
+                    <h3>₹1,300</h3>
+                    <div class="d-flex">
+                       <h6 class="text-striked text-muted mr-2">₹1,999</h6>
+                       <h6 class="text-success">32% off</h6>
+                    </div>
+                    <button class="btn btn-primary">Check Rooms</button>
+                  </div>
+                </div>
+              </div>    
+            </div>
+        </div>
+        <div class="col-sm-5 col-md-3 col-lg-3" onclick="window.location.href='./hotel.html'" style="cursor: pointer;">
+          <div class="hotel-card bg-white rounded-2 shadow d-flex flex-column overflow-hidden d-block d-lg-flex">
+            <div class="hotel-card_images position-relative">
+              <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/91/70/79/goldfinch-hotel-bangalore.jpg?w=1000&h=600&s=1" style="max-height: 200px;">
+              <div class="position-absolute" style="top: 10px; right: 10px; z-index: 100;">
+                  <button onclick="like('hrt-2')" class="text-dark ml-auto bg-transparent border-0"><i class="far fa-heart fa-lg" id="hrt-2"></i></button>
+              </div>
+            </div>
+            <div class="hotel-card_info p-4">
+              <div class="d-flex justify-content-between">
+                  <div class="d-flex flex-column align-items-left mb-2">
+                      <h5 class="mb-0 mr-2">Goldfinch</h5>
+                      <div>
+                          <i class="fa fa-star text-warning"></i>
+                          <i class="fa fa-star text-warning"></i>
+                          <i class="fa fa-star text-warning"></i>
+                          <i class="fa fa-star text-warning"></i>
+                      </div>
+                  </div>
+                  <div class="p text-black-50 text-right                  ">
+                      Starts from <br><span class="text-black fw-semibold fs-5">₹9,499</span>
+                  </div>
+              </div>
+              <div class="d-flex hidden d-none justify-content-between align-items-end">                      
+                <div class="hotel-card_pricing text-center">
+                  <h3>₹1,300</h3>
+                  <div class="d-flex">
+                     <h6 class="text-striked text-muted mr-2">₹1,999</h6>
+                     <h6 class="text-success">32% off</h6>
+                  </div>
+                  <button class="btn btn-primary">Check Rooms</button>
+                </div>
+              </div>
+            </div>    
+          </div>
+        
+        </div>  
+      <div class="col-sm-5 col-md-3 col-lg-3" onclick="window.location.href='./hotel.html'" style="cursor: pointer;">
+        <div class="hotel-card bg-white rounded-2 shadow d-flex flex-column overflow-hidden d-block d-lg-flex">
+          <div class="hotel-card_images position-relative">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/c6/3f/33/facade.jpg?w=900&h=600&s=1" style="max-height: 200px;">
+            <div class="position-absolute" style="top: 10px; right: 10px; z-index: 100;">
+                <button onclick="like('hrt-3')" class="text-dark ml-auto bg-transparent border-0"><i class="far fa-heart fa-lg" id="hrt-3"></i></button>
+            </div>
+          </div>
+          <div class="hotel-card_info p-4">
+            <div class="d-flex justify-content-between">
+                <div class="d-flex flex-column align-items-left mb-2">
+                    <h5 class="mb-0 mr-2">Mirage Hotel</h5>
+                    <div>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                    </div>
+                </div>
+                <div class="p text-black-50 text-right                  ">
+                    Starts from <br><span class="text-black fw-semibold fs-5">₹21,001</span>
+                </div>
+            </div>
+            <div class="d-flex hidden d-none justify-content-between align-items-end">                      
+              <div class="hotel-card_pricing text-center">
+                <h3>₹1,300</h3>
+                <div class="d-flex">
+                   <h6 class="text-striked text-muted mr-2">₹1,999</h6>
+                   <h6 class="text-success">32% off</h6>
+                </div>
+                <button class="btn btn-primary">Check Rooms</button>
+              </div>
+            </div>
+          </div>    
+        </div>
+    </div>  
+        </div>  
+        <div class="d-flex justify-content-between mb-5">
+          <div class="col-sm-5 col-md-3 col-lg-3" onclick="window.location.href='./hotel.html'" style="cursor: pointer;">
+              <div class="hotel-card bg-white rounded-2 shadow d-flex flex-column overflow-hidden d-block d-lg-flex">
+                <div class="hotel-card_images position-relative">
+                  <img src="https://r1imghtlak.mmtcdn.com/681c5fc09e5411e9a4c10242ac110003.jpg?&output-quality=75&downsize=910:612&crop=910:612;4,0&output-format=jpg" style="max-height: 200px;">
+                  <div class="position-absolute" style="top: 10px; right: 10px; z-index: 100;">
+                      <button onclick="like('hrt-4')" class="text-dark ml-auto bg-transparent border-0"><i class="far fa-heart fa-lg" id="hrt-4"></i></button>
+                  </div>
+                </div>
+                <div class="hotel-card_info p-4">
+                  <div class="d-flex justify-content-between">
+                      <div class="d-flex flex-column align-items-left mb-2">
+                          <h5 class="mb-0 mr-2">The Beatle</h5>
+                          <div>
+                              <i class="fa fa-star text-warning"></i>
+                              <i class="fa fa-star text-warning"></i>
+                              <i class="fa fa-star text-warning"></i>
+                              <i class="fa fa-star text-warning"></i>
+                          </div>
+                      </div>
+                      <div class="p text-black-50 text-right                  ">
+                          Starts from <br><span class="text-black fw-semibold fs-5">₹10,399</span>
+                      </div>
+                  </div>
+                  <div class="d-flex hidden d-none justify-content-between align-items-end">                      
+                    <div class="hotel-card_pricing text-center">
+                      <h3>₹1,300</h3>
+                      <div class="d-flex">
+                         <h6 class="text-striked text-muted mr-2">₹1,999</h6>
+                         <h6 class="text-success">32% off</h6>
+                      </div>
+                      <button class="btn btn-primary">Check Rooms</button>
+                    </div>
+                  </div>
+                </div>    
+              </div>
+          </div>
+          <div class="col-sm-5 col-md-3 col-lg-3" onclick="window.location.href='./hotel.html'" style="cursor: pointer;">
+            <div class="hotel-card bg-white rounded-2 shadow d-flex flex-column overflow-hidden d-block d-lg-flex">
+              <div class="hotel-card_images position-relative">
+                <img src="https://cdn.kiwicollection.com/media/property/PR005426/xl/005426-01-Dining-View-Four-Seasons-Mumbai.jpg?cb=1565285306" style="max-height: 200px;">
+                <div class="position-absolute" style="top: 10px; right: 10px; z-index: 100;">
+                    <button onclick="like('hrt-5')" class="text-dark ml-auto bg-transparent border-0"><i class="far fa-heart fa-lg" id="hrt-5"></i></button>
+                </div>
+              </div>
+              <div class="hotel-card_info p-4">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-column align-items-left mb-2">
+                        <h5 class="mb-0 mr-2">Four Seasons</h5>
+                        <div>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                        </div>
+                    </div>
+                    <div class="p text-black-50 text-right                  ">
+                        Starts from <br><span class="text-black fw-semibold fs-5">₹19,999</span>
+                    </div>
+                </div>
+                <div class="d-flex hidden d-none justify-content-between align-items-end">                      
+                  <div class="hotel-card_pricing text-center">
+                    <h3>₹1,300</h3>
+                    <div class="d-flex">
+                       <h6 class="text-striked text-muted mr-2">₹1,999</h6>
+                       <h6 class="text-success">32% off</h6>
+                    </div>
+                    <button class="btn btn-primary">Check Rooms</button>
+                  </div>
+                </div>
+              </div>    
+            </div>
+        </div>  
+        <div class="col-sm-5 col-md-3 col-lg-3" onclick="window.location.href='./hotel.html'" style="cursor: pointer;">
+          <div class="hotel-card bg-white rounded-2 shadow d-flex flex-column overflow-hidden d-block d-lg-flex">
+            <div class="hotel-card_images position-relative">
+              <img src="https://gos3.ibcdn.com/f5c1e518f52511e786b5025f77df004f.jpg" style="max-height: 200px;">
+              <div class="position-absolute" style="top: 10px; right: 10px; z-index: 100;">
+                  <button onclick="like('hrt-6')" class="text-dark ml-auto bg-transparent border-0"><i class="far fa-heart fa-lg" id="hrt-6"></i></button>
+              </div>
+            </div>
+            <div class="hotel-card_info p-4">
+              <div class="d-flex justify-content-between">
+                  <div class="d-flex flex-column align-items-left mb-2">
+                      <h5 class="mb-0 mr-2">Novotel</h5>
+                      <div>
+                          <i class="fa fa-star text-warning"></i>
+                          <i class="fa fa-star text-warning"></i>
+                          <i class="fa fa-star text-warning"></i>
+                          <i class="fa fa-star text-warning"></i>
+                          <i class="fa fa-star text-warning"></i>
+                      </div>
+                  </div>
+                  <div class="p text-black-50 text-right                  ">
+                      Starts from <br><span class="text-black fw-semibold fs-5">₹22,250</span>
+                  </div>
+              </div>
+              <div class="d-flex hidden d-none justify-content-between align-items-end">                      
+                <div class="hotel-card_pricing text-center">
+                  <h3>₹1,300</h3>
+                  <div class="d-flex">
+                     <h6 class="text-striked text-muted mr-2">₹1,999</h6>
+                     <h6 class="text-success">32% off</h6>
+                  </div>
+                  <button class="btn btn-primary">Check Rooms</button>
+                </div>
+              </div>
+            </div>    
+          </div>
+      </div>  
+        </div>
+        <div class="d-flex justify-content-end mb-5">
+          <button class="btn btn-outline-dark">Show more</button>
+        </div>
+        </div>
+      </section>
+
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

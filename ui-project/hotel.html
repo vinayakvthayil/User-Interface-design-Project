@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BookingCo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.staticaly.com/gh/hung1001/font-awesome-pro/8af0edd/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="./images.jfif">
+  </head>
+  <body>
+    <div class="bg-white mx-md-5 px-md-5 position-relative">
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-5">
+        <a
+          href="/"
+          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
+        >
+          <span class="fs-4 fw-bold">BookingCo</span>
+        </a>
+
+        <ul class="nav">
+          <li class="nav-item fw-normal">
+            <a
+              href="./index.html"
+              class="nav-link text-decoration-none text-black"
+              aria-current="page"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item fw-normal">
+            <a href="./hotel.html" class="nav-link text-decoration-none text-black"
+              >Contact</a
+            >
+          </li>
+          <li class="nav-item fw-normal">
+            <a href="./aboutus.html" class="nav-link text-decoration-none text-black"
+              >About</a
+            >
+          </li>
+          <li class="nav-item fw-normal">
+            <a href="./game/game.html" class="nav-link text-decoration-none text-black"
+              >Game</a
+            >
+          </li>
+          <li class="nav-item fw-normal">
+              <button
+                      onclick="window.location.href='./login.html'"
+                      name="login"
+                      class="nav-link text-black px-4 py-1 border-1 border border-dark rounded-2"
+              >
+                  Login
+              </button>
+          </li>
+        </ul>
+      </header>
+      <section class="w-100 d-flex flex-column">
+        <div class="row w-100">
+            <div class="col-4">
+                <div class="d-flex">
+                    <img src="https://i.ibb.co/s9z4bTk/executive-suite-2.png" style="max-height: 200px" class="shadow rounded-2 m-2"/>
+                    <img src="https://i.ibb.co/9VrB4RQ/san-francisco-luxury-scaled-1.png" style="max-height: 200px" class="shadow rounded-2 m-2"/>
+                </div>
+                <div class="d-flex">
+                    <img src="https://i.ibb.co/Tv4j2s7/3a1510c0286542f4a8d67b14948975d5-LARGE-eebff1a0dbb616534704da120a14e674.png" style="max-height: 200px" class="shadow rounded-2 m-2"/>
+                    <img src="https://i.ibb.co/Xy1pCRq/Four-Seasons-San-Francisco-Courtesy-2018-Four-Seasons-Lobby-and-Front-Desk.png" style="max-height: 200px" class="shadow rounded-2 m-2"/>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="hotel-card_info p-4">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column align-items-left mb-2">
+                            <div>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                            </div>
+                            <h5 class="mb-0 mr-2">Four Seasons</h5>
+                            <div>
+                                <div class="badge bg-success opacity-50">8.4</div>
+                                Pleaseant <br/>
+                                <div class="p"><i>4197 reviews</i></div>
+                            </div>
+                        </div>
+                        <div class="p text-black-50 text-right                  ">
+                            <!-- Starts from <br><span class="text-black fw-semibold fs-5">$1300</span> -->
+                            <button class="btn btn-lg btn-success" onclick="window.location.href='./booking.html'">
+                                BOOK NOW &rarr;
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="d-flex flex-column mt-5">
+                            <div class="fw-semibold fs-4">Facilities</div>
+                            <div class="d-flex mt-2 me-3 mt-4">
+                                <div>
+                                    <div
+                                        class="p-3 border d-flex flex-column justify-content-center text-center align-items-center border-1 rounded me-5"
+                                        style="height: 100px; width: 100px; color: #6bbedc; border-color: #6bbedc !important;"
+                                    >
+                                        <i class="fas fa-swimmer fa-2x"></i>                                        
+                                        Swimming pool
+                                    </div>                                    
+                                </div>
+                              <div
+                                class="p-3 border d-flex flex-column justify-content-center align-items-center border-1 rounded me-5"
+                                style="height: 100px; width: 100px; color: #e6de78; border-color: #e6de78 !important;"
+                              >
+                                <i class="fas fa-air-conditioner fa-2x"></i>
+                                <span class="mt-2">AC</span>
+                              </div>
+                              <div
+                                class="p-3 border d-flex flex-column shadow-sm justify-content-center align-items-center border-1 rounded me-5"
+                                style="height: 100px; width: 100px; color: #efa963; border-color: #efa963 !important;"
+                              >
+                                <i class="fas fa-wifi"></i>
+                                <span class="mt-2">WiFi</span>
+                              </div>
+                            </div> 
+                          </div>
+                    </div>
+                  </div>   
+            </div>
+        </div>
+        <div class="row d-flex w-100 mt-4">
+            <div class="col-6 p-2">
+                <iframe class="rounded-2 w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15889.125775036297!2d-122.39890612500437!3d37.794678681113254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808883879e69%3A0x31f749319c073bc5!2sFour%20Seasons%20Hotel%20San%20Francisco!5e0!3m2!1sen!2sin!4v1655651041381!5m2!1sen!2sin" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="col-6 p-2 h-100">
+                <div class="border border-1 border-dark rounded-2 d-flex flex-column" style="height: 250px;">
+                    <div class="d-flex">
+                    <div class="col-6 p-4">
+                        <div class="">
+                            <div class="mb-3 fw-semibold"><i class="fas fa-location-pin"></i>ADDRESS</div>
+                            <div>
+                                757 Market StHilton hawai village,
+                                <br>
+                                San Francisco,
+                                <br>
+                                CA 94103, United States.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 p-4">
+                        <div class=""><i class="fa fa-phone border-1 me-2"></i> +1 415-633-3000</div>
+                        <div class=""><i class="fa fa-mailbox border-1 me-2"></i> fourseasonsCA@gmail.com</div>                        
+                    </div>
+                    </div>
+                    <div class="col-12 p-4 text-muted px-5 pt-2 pb-5">
+                        Chic rooms in a high-end hotel offering spa & sports club access, plus a stylish restaurant/bar. 
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>                    
+    </div>    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
